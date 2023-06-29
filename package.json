@@ -31,8 +31,12 @@
   "homepage": "https://github.com/patient-nz/medical-cannabis-data-processor#readme",
   "author": "Fabian Cook <hello@fabiancook.dev>",
   "license": "MIT",
+  "peerDependencies": {
+    "@patient-nz/medical-cannabis-data": "^1.0.0-alpha.3"
+  },
   "dependencies": {
-    "@patient-nz/medical-cannabis-data": "^1.0.0-alpha.0"
+    "@patient-nz/medical-cannabis-data": "^1.0.0-alpha.5",
+    "simple-statistics": "^7.8.3"
   },
   "devDependencies": {
     "@rollup/plugin-node-resolve": "^15.1.0",
@@ -68,6 +72,7 @@
     "rimraf": "^3.0.2",
     "rollup": "^3.25.1",
     "rollup-plugin-ignore": "^1.0.10",
+    "s-ago": "^2.2.0",
     "source-map-support": "^0.5.21",
     "ts-node": "^10.2.1",
     "tsc-watch": "^6.0.4",
@@ -76,9 +81,6 @@
     "v8-to-istanbul": "^8.1.0",
     "why-is-node-still-running": "^1.0.0",
     "wrangler": "^3.0.0"
-  },
-  "optionalDependencies": {
-    "redis-memory-server": "^0.6.0"
   },
   "scripts": {
     "test:all": "yarn test:node",
