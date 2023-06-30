@@ -20,6 +20,10 @@ jobs:
         with:
           node-version: "18.x"
           registry-url: "https://registry.npmjs.org"
+      - run: |
+          yarn install
+      - run: yarn build
+      - run: yarn test
       - name: Package Registry Publish - npm
         run: |
           git config user.name "${{ github.actor }}"
